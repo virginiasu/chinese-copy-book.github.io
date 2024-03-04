@@ -40,3 +40,7 @@ function toggleDate() {
     document.getElementById("printHeader").style.display = "none";
   }
 }
+
+function printPreview() {
+  window.print();
+}
