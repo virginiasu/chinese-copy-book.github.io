@@ -8,13 +8,14 @@ body {
 }
 
 h1 {
-  /* background white and transparency 0.5 */
   background-color: rgba(255, 255, 255, 0.5);
   margin: 0;
   padding: 20px;
   text-align: center;
   color: #3d5f5e;
   font-weight: bold;
+  text-shadow: -1px -1px 2px #fff, -1px 1px 2px #fff, 1px -1px 2px #fff,
+    1px 1px 2px #fff;
 }
 
 .main {
