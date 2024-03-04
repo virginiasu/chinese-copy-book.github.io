@@ -44,3 +44,42 @@ function toggleDate() {
 function printPreview() {
   window.print();
 }
+
+function pickAll() {
+  const level = $(event.target).parent().parent();
+  level.find("button.character").each(function () {
+    addToPrint($(this).text());
+  });
+}
+
+function addToPrint(character) {
+  var printArea = $("#characters");
+  var printRow = $("<div></div>").addClass("row");
+  for (var i = 0; i < 3; i++) {
+    printRow.append(
+      `<span class="char lead"><span class="letter">${character}</span></span>`
+    );
+  }
+  for (var i = 0; i < 12; i++) {
+    printRow.append(
+      `<span class="char practice"><span class="letter">${character}</span></span>`
+    );
+  }
+  printRow.append(`<button class="delete noPrint">x</button>`);
+  printRow.append(`<div class="divider">divider</div>`);
+  printArea.append(printRow);
+  printRow.find(".delete").click(removeRow);
+}
+
+function removeRow() {
+  $(event.target).parent().remove();
+}
+
+function AddCustomToPrint() {
+  const characters = $("#customTextInput");
+  const characterArray = characters.val().split("");
+  $.each(characterArray, function (index, character) {
+    addToPrint(character);
+  });
+  characters.val("");
+}

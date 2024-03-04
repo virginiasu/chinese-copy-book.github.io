@@ -23,7 +23,7 @@ input[type="text"] {
   outline: none;
   border-radius: 5px;
   box-sizing: border-box;
-  background: none;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .label {
