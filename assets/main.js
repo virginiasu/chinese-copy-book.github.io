@@ -3,10 +3,10 @@ function addToPrint(character) {
   const printRow = document.createElement("p");
   printRow.classList.add("row");
   for (i = 0; i < 3; i++) {
-    printRow.innerHTML += `<span class="char lead">${character}</span>`;
+    printRow.innerHTML += `<span class="char lead"><span class="letter">${character}</span></span>`;
   }
   for (i = 0; i < 9; i++) {
-    printRow.innerHTML += `<span class="char practice">${character}</span>`;
+    printRow.innerHTML += `<span class="char practice"><span class="letter">${character}</span></span>`;
   }
   printArea.appendChild(printRow);
 }
