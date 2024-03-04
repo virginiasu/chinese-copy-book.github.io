@@ -67,21 +67,27 @@ h1 {
   font-weight: bold;
 }
 
-.printPreview .name {
+.printPreview #printHeader {
+  display: none;
   text-align: center;
   margin-bottom: 30px;
 }
 
-.printPreview .name span {
+.printPreview #printHeader span {
   margin-right: 10px;
 }
 
-p.row {
-  margin: 20px 0;
+div.row {
+  margin: 0;
   text-align: center;
 }
 
-p.row .char {
+div.row div.divider {
+  margin-top: 20px;
+  visibility: hidden;
+}
+
+div.row .char {
   position: relative;
   margin: 3px;
   font-size: 22px;
@@ -89,7 +95,7 @@ p.row .char {
   padding: 5px;
 }
 
-p.row span.char::before {
+div.row span.char::before {
   content: "";
   position: absolute;
   left: 0;
@@ -100,7 +106,7 @@ p.row span.char::before {
   border-bottom: 1px solid #eee;
 }
 
-p.row span.char::after {
+div.row span.char::after {
   content: "";
   position: absolute;
   left: 0;
@@ -111,7 +117,7 @@ p.row span.char::after {
   border-right: 1px solid #eee;
 }
 
-p.row span.char span.letter {
+div.row span.char span.letter {
   position: relative;
   z-index: 2;
 }
@@ -122,4 +128,30 @@ span.lead span.letter {
 
 span.practice span.letter {
   opacity: 0;
+}
+
+@media print {
+  .noPrint {
+    display: none;
+  }
+
+  .printPreview {
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    margin-top: -30px;
+  }
+
+  .printPreview .paper {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .printPreview::after {
+    display: none;
+  }
+
+  .printPreview div.row::after {
+    margin-bottom: 30px;
+  }
 }

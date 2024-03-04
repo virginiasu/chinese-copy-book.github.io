@@ -1,6 +1,6 @@
 function addToPrint(character) {
   const printArea = document.getElementById("characters");
-  const printRow = document.createElement("p");
+  const printRow = document.createElement("div");
   printRow.classList.add("row");
   for (i = 0; i < 3; i++) {
     printRow.innerHTML += `<span class="char lead"><span class="letter">${character}</span></span>`;
@@ -8,6 +8,7 @@ function addToPrint(character) {
   for (i = 0; i < 9; i++) {
     printRow.innerHTML += `<span class="char practice"><span class="letter">${character}</span></span>`;
   }
+  printRow.innerHTML += `<div class="divider">divider</div>`;
   printArea.appendChild(printRow);
 }
 
