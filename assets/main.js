@@ -1,3 +1,7 @@
+function removeRow() {
+  event.target.parentElement.remove();
+}
+
 function addToPrint(character) {
   const printArea = document.getElementById("characters");
   const printRow = document.createElement("div");
@@ -8,6 +12,7 @@ function addToPrint(character) {
   for (i = 0; i < 12; i++) {
     printRow.innerHTML += `<span class="char practice"><span class="letter">${character}</span></span>`;
   }
+  printRow.innerHTML += `<button class="delete noPrint" onClick="removeRow()">x</button>`;
   printRow.innerHTML += `<div class="divider">divider</div>`;
   printArea.appendChild(printRow);
 }

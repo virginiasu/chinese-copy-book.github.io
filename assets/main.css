@@ -78,8 +78,22 @@ h1 {
 }
 
 div.row {
+  position: relative;
   margin: 0;
   text-align: center;
+}
+
+div.row .delete {
+  position: absolute;
+  top: -7px;
+  right: -23px;
+  cursor: pointer;
+  color: #c83c23;
+  font-size: 20px;
+  border: none;
+  background: none;
+  padding: 5px 10px;
+  z-index: 2;
 }
 
 div.row div.divider {
@@ -132,15 +146,16 @@ span.practice span.letter {
 
 button.print {
   position: absolute;
-  top: 27px;
-  right: 32px;
+  top: -14px;
+  right: 26px;
   border: none;
   padding: 5px 10px 5px 40px;
   cursor: pointer;
-  background: url("printer.png") no-repeat 10px center;
+  background: url(printer.png) no-repeat 10px center;
   background-size: 20px 20px;
-  box-shadow: 1px 1px 5px #3d5f5e;
-  border-radius: 3px;
+  box-shadow: 0 1px 2px #3d5f5e;
+  border-radius: 5px;
+  background-color: #eaeaea;
 }
 
 @media print {
