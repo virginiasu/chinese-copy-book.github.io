@@ -1,43 +1,43 @@
 function updateCName() {
-  const cname = document.getElementById("chineseText").value;
-  const ename = document.getElementById("englishText").value;
-  const dateToggle = document.getElementById("dateToggle").checked;
+  const cname = $("#chineseText").val();
+  const ename = $("#englishText").val();
+  const dateToggle = $("#dateToggle").is(":checked");
   const cnameDisplay = document.getElementById("chineseName");
   cnameDisplay.innerHTML = cname;
 
   if (cname || ename || dateToggle) {
-    document.getElementById("printHeader").style.display = "block";
+    $("#printHeader").show();
   } else {
-    document.getElementById("printHeader").style.display = "none";
+    $("#printHeader").hide();
   }
 }
 
 function updateEName() {
-  const cname = document.getElementById("chineseText").value;
-  const ename = document.getElementById("englishText").value;
-  const dateToggle = document.getElementById("dateToggle").checked;
+  const cname = $("#chineseText").val();
+  const ename = $("#englishText").val();
+  const dateToggle = $("#dateToggle").is(":checked");
   const enameDisplay = document.getElementById("englishName");
   enameDisplay.innerHTML = ename;
 
   if (cname || ename || dateToggle) {
-    document.getElementById("printHeader").style.display = "block";
+    $("#printHeader").show();
   } else {
-    document.getElementById("printHeader").style.display = "none";
+    $("#printHeader").hide();
   }
 }
 
 function toggleDate() {
-  const cname = document.getElementById("chineseText").value;
-  const ename = document.getElementById("englishText").value;
-  const dateToggle = document.getElementById("dateToggle").checked;
+  const cname = $("#chineseText").val();
+  const ename = $("#englishText").val();
+  const dateToggle = $("#dateToggle").is(":checked");
   const currentDate = new Date().toDateString();
   const dateText = dateToggle ? currentDate : "";
   document.getElementById("date").innerHTML = dateText;
 
   if (cname || ename || dateToggle) {
-    document.getElementById("printHeader").style.display = "block";
+    $("#printHeader").show();
   } else {
-    document.getElementById("printHeader").style.display = "none";
+    $("#printHeader").hide();
   }
 }
 
