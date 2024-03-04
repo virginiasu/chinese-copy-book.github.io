@@ -34,3 +34,8 @@ input[type="text"] {
   font-weight: bold;
   font-size: 14px;
 }
+
+span.character {
+  display: inline-block;
+  margin: 3px;
+}
