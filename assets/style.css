@@ -1,0 +1,36 @@
+input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  border: 2px solid #3d5f5e;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  vertical-align: middle;
+}
+input[type="checkbox"]:checked {
+  /* use a check icon as background */
+  background: url("check.png") no-repeat center center;
+  background-size: contain;
+}
+
+input[type="text"] {
+  width: 240px;
+  padding: 7px 10px;
+  margin: 3px 0;
+  display: inline-block;
+  border: 2px solid #3d5f5e;
+  outline: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background: none;
+}
+
+.label {
+  padding: 0 5px;
+  border-radius: 5px;
+  text-shadow: 1px 1px 2px #ccc;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 14px;
+}

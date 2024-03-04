@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>中文字帖</title>
+    <link rel="stylesheet" type="text/css" href="assets/main.css" />
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+  </head>
+  <body>
+    <h1>功不唐捐 玉汝于成</h1>
+
+    <div class="main">
+      <div class="content_and_config">
+        <div class="config">
+          <div class="chinese">
+            <input
+              type="text"
+              id="chineseText"
+              placeholder="姓名"
+              maxlength="20"
+              onkeyup="updateCName()"
+            />
+          </div>
+          <div class="english">
+            <input
+              type="text"
+              id="englishText"
+              placeholder="name"
+              max="50"
+              onkeyup="updateEName()"
+            />
+          </div>
+          <div class="date label">
+            Date:<input
+              type="checkbox"
+              id="dateToggle"
+              onclick="toggleDate()"
+            />
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="preload">
+            <div id="levels"></div>
+          </div>
+
+          <div class="custom"></div>
+        </div>
+      </div>
+
+      <div class="printPreview">
+        <div class="paper">
+          <div class="name">
+            <span id="chineseName"></span>
+            <span id="englishName"></span>
+            <span id="date"></span>
+          </div>
+          <div id="characters"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/main.js"></script>
+    <script src="assets/actions.js"></script>
+  </body>
+</html>
