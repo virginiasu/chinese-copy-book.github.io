@@ -40,3 +40,7 @@ span.character {
   display: inline-block;
   margin: 3px;
 }
+
+button.pickAll {
+  cursor: pointer;
+}
