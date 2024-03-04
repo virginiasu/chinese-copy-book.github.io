@@ -5,7 +5,7 @@ function addToPrint(character) {
   for (i = 0; i < 3; i++) {
     printRow.innerHTML += `<span class="char lead"><span class="letter">${character}</span></span>`;
   }
-  for (i = 0; i < 9; i++) {
+  for (i = 0; i < 12; i++) {
     printRow.innerHTML += `<span class="char practice"><span class="letter">${character}</span></span>`;
   }
   printRow.innerHTML += `<div class="divider">divider</div>`;
