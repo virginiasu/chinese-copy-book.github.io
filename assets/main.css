@@ -145,6 +145,7 @@ span.practice span.letter {
   .printPreview .paper {
     width: 100%;
     margin-top: 0;
+    padding: 0;
   }
 
   .printPreview::after {
