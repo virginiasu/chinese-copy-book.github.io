@@ -55,6 +55,7 @@ function pickAll() {
 function addToPrint(character) {
   var printArea = $("#characters");
   var printRow = $("<div></div>").addClass("row");
+  printRow.append(`<div class="divider">divider</div>`);
   for (var i = 0; i < 3; i++) {
     printRow.append(
       `<span class="char lead"><span class="letter">${character}</span></span>`
@@ -66,7 +67,6 @@ function addToPrint(character) {
     );
   }
   printRow.append(`<button class="delete noPrint">x</button>`);
-  printRow.append(`<div class="divider">divider</div>`);
   printArea.append(printRow);
   printRow.find(".delete").click(removeRow);
 }
