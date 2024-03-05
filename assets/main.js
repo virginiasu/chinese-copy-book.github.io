@@ -3,7 +3,7 @@ $(document).ready(function () {
     $.each(data, function (level, levelData) {
       var levelDiv = $("<div></div>").addClass("level");
       levelDiv.html(`
-              <h4>Grade ${level} <button class="pickAll" onClick="pickAll()">全选</button></h4>
+              <h4>Level ${level} <button class="pickAll" onClick="pickAll()">全选</button></h4>
               <div class="level-content" id="${level}"></div>
           `);
 
