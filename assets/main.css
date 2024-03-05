@@ -97,7 +97,7 @@ div.row {
 
 div.row .delete {
   position: absolute;
-  top: -7px;
+  top: 10px;
   right: -23px;
   cursor: pointer;
   color: #c83c23;
