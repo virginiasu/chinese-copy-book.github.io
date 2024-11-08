@@ -56,12 +56,12 @@ function addToPrint(character) {
   var printArea = $("#characters");
   var printRow = $("<div></div>").addClass("row");
   printRow.append(`<div class="divider">divider</div>`);
-  for (var i = 0; i < 3; i++) {
+  for (var i = 0; i < 12; i++) {
     printRow.append(
       `<span class="char lead"><span class="letter">${character}</span></span>`
     );
   }
-  for (var i = 0; i < 12; i++) {
+  for (var i = 0; i < 3; i++) {
     printRow.append(
       `<span class="char practice"><span class="letter">${character}</span></span>`
     );

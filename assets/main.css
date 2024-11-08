@@ -119,6 +119,7 @@ div.row .char {
   font-size: 22px;
   border: 1px solid #ccc;
   padding: 5px;
+  font-family: fangsong;
 }
 
 div.row span.char::before {
