@@ -1,14 +1,14 @@
 {
-  "name": "chinese-copy-book",
+  "name": "chinese-handwritting-practice-sheet",
   "version": "1.0.0",
-  "description": "Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).",
+  "description": "Prepare a chinese handwritting practice sheet and print it out. You can customize your own.",
   "main": "index.js",
   "scripts": {
     "start": "electron index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Yuan Su",
   "license": "ISC",
   "devDependencies": {
     "electron": "^29.1.1"
