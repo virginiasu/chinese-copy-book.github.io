@@ -4,6 +4,7 @@
   "description": "Prepare a chinese handwritting practice sheet and print it out. You can customize your own.",
   "main": "index.js",
   "scripts": {
+    "build": "electron-builder",
     "start": "electron index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,6 +12,7 @@
   "author": "Yuan Su",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^29.1.1"
+    "electron": "^29.1.1",
+    "electron-builder": "^25.1.8"
   }
 }
