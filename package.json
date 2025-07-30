@@ -6,6 +6,7 @@
   "scripts": {
     "build": "electron-builder",
     "start": "electron index.js",
+    "serve": "http-server -p 3000 -o",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,6 +14,7 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^29.1.1",
-    "electron-builder": "^25.1.8"
+    "electron-builder": "^25.1.8",
+    "http-server": "^14.1.1"
   }
 }

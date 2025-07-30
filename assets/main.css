@@ -1,8 +1,22 @@
 body {
   background: url("background.jpeg") no-repeat center center fixed;
   background-size: cover;
-  /* chinese font */
-  font-family: Kai;
+  /* Cross-platform Chinese font stack */
+  font-family:
+    /* Google Fonts - consistent across platforms */
+    "Noto Sans SC",
+    /* Chinese fonts */
+    "Kai", "楷体", "KaiTi",
+    /* Mac Chinese fonts */
+    "Kaiti SC", "Kaiti TC", "STKaiti",
+    /* Windows Chinese fonts */
+    "DFKai-SB", "BiauKai",
+    /* Fallback fonts */
+    "Noto Sans CJK SC", "Source Han Sans SC",
+    /* System fallbacks */
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "SimHei",
+    /* Final fallbacks */
+    sans-serif;
   margin: 0;
   box-sizing: border-box;
 }
@@ -61,7 +75,7 @@ h4 {
   background: white;
   margin: 10px auto;
   padding: 20px;
-  width: 600px;
+  width: 640px;
 }
 
 .printPreview::after {
@@ -93,6 +107,9 @@ div.row {
   margin: 0;
   text-align: center;
   page-break-inside: avoid;
+  break-inside: avoid;
+  -webkit-break-inside: avoid;
+  overflow: visible;
 }
 
 div.row .delete {
@@ -109,17 +126,34 @@ div.row .delete {
 }
 
 div.row div.divider {
-  margin-top: 20px;
+  margin-top: 10px;
   visibility: hidden;
 }
 
 div.row .char {
   position: relative;
   margin: 3px;
-  font-size: 22px;
+  font-size: 24px;
   border: 1px solid #ccc;
-  padding: 5px;
-  font-family: fangsong;
+  padding: 3px 8px;
+  /* Cross-platform Chinese calligraphy font stack for practice characters */
+  font-family:
+    /* Google Fonts - consistent serif for practice */
+    "Noto Serif SC",
+    /* Traditional Chinese calligraphy fonts */
+    "fangsong", "仿宋", "FangSong",
+    /* Mac Chinese fonts */
+    "Songti SC", "Songti TC", "STSong",
+    /* Windows Chinese fonts */
+    "FangSong_GB2312", "仿宋_GB2312",
+    /* Alternative calligraphy fonts */
+    "Kai", "楷体", "KaiTi", "STKaiti",
+    /* Fallback fonts */
+    "Noto Serif CJK SC", "Source Han Serif SC",
+    /* System fallbacks */
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "SimSun",
+    /* Final fallbacks */
+    serif;
 }
 
 div.row span.char::before {
@@ -195,5 +229,31 @@ button.print {
 
   .printPreview div.row::after {
     margin-bottom: 30px;
+  }
+
+  /* Enhanced page break control for printing */
+  div.row {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    -webkit-break-inside: avoid !important;
+    page-break-after: auto;
+    break-after: auto;
+    margin-bottom: 10px;
+    display: block;
+    overflow: visible;
+  }
+
+  /* Ensure characters don't break */
+  div.row .char {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    -webkit-break-inside: avoid !important;
+    display: inline-block;
+  }
+
+  /* Add some spacing to help with page breaks */
+  #characters {
+    orphans: 1;
+    widows: 1;
   }
 }

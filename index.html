@@ -1,73 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>中文字帖</title>
-    <link rel="stylesheet" type="text/css" href="assets/main.css" />
-    <link rel="stylesheet" type="text/css" href="assets/style.css" />
-    <link rel="icon" type="image/png" href="favicon.png" />
-  </head>
-  <body>
-    <h1 class="noPrint">功不唐捐 玉汝于成</h1>
 
-    <div class="main">
-      <div class="content_and_config noPrint">
-        <div class="config">
-          <div class="chinese">
-            <input
-              type="text"
-              id="chineseText"
-              placeholder="姓名"
-              maxlength="20"
-              onkeyup="updateCName()"
-            />
-          </div>
-          <div class="english">
-            <input
-              type="text"
-              id="englishText"
-              placeholder="Name"
-              max="50"
-              onkeyup="updateEName()"
-            />
-          </div>
-          <div class="date label">
-            Date:<input
-              type="checkbox"
-              id="dateToggle"
-              onclick="toggleDate()"
-            />
-          </div>
+<head>
+  <title>中文字帖</title>
+  <!-- Google Fonts for consistent Chinese font rendering -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/main.css" />
+  <link rel="stylesheet" type="text/css" href="assets/style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+
+<body>
+  <h1 class="noPrint">功不唐捐 玉汝于成</h1>
+
+  <div class="main">
+    <div class="content_and_config noPrint">
+      <div class="config">
+        <div class="chinese">
+          <input type="text" id="chineseText" placeholder="姓名" maxlength="20" onkeyup="updateCName()" />
         </div>
-
-        <div class="content">
-          <div class="custom">
-            <p>输入计划练习书写的汉字:</p>
-            <input type="text" id="customTextInput" placeholder="自定义" />
-            <button onclick="AddCustomToPrint()">添加到打印</button>
-          </div>
-
-          <div class="preload">
-            <p>从下列汉字中选择</p>
-            <div id="levels"></div>
-          </div>
+        <div class="english">
+          <input type="text" id="englishText" placeholder="Name" max="50" onkeyup="updateEName()" />
+        </div>
+        <div class="date label">
+          Date:<input type="checkbox" id="dateToggle" onclick="toggleDate()" />
         </div>
       </div>
 
-      <div class="printPreview">
-        <button onclick="printPreview()" class="print noPrint">Print</button>
-        <div class="paper">
-          <div id="printHeader">
-            <span id="chineseName"></span>
-            <span id="englishName"></span>
-            <span id="date"></span>
-          </div>
-          <div id="characters"></div>
+      <div class="content">
+        <div class="custom">
+          <p>输入计划练习书写的汉字:</p>
+          <input type="text" id="customTextInput" placeholder="自定义" />
+          <button onclick="AddCustomToPrint()">添加到打印</button>
+        </div>
+
+        <div class="preload">
+          <p>从下列汉字中选择</p>
+          <div id="levels"></div>
         </div>
       </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="assets/actions.js"></script>
-    <script src="assets/main.js"></script>
-  </body>
+    <div class="printPreview">
+      <button onclick="printPreview()" class="print noPrint">Print</button>
+      <div class="paper">
+        <div id="printHeader">
+          <span id="chineseName"></span>
+          <span id="englishName"></span>
+          <span id="date"></span>
+        </div>
+        <div id="characters"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="assets/actions.js"></script>
+  <script src="assets/main.js"></script>
+</body>
+
 </html>
