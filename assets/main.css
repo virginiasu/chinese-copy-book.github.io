@@ -258,3 +258,25 @@ button.print {
     widows: 1;
   }
 }
+
+/* Accordion Toggle Styles */
+.level h4 {
+  position: relative;
+  cursor: pointer;
+  padding-right: 30px;
+}
+
+.accordion-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #7a8b6d;
+  font-size: 14px;
+  user-select: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.accordion-toggle:hover {
+  color: #666;
+}
