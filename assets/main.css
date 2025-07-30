@@ -263,14 +263,14 @@ button.print {
 .level h4 {
   position: relative;
   cursor: pointer;
-  padding-right: 30px;
+  padding-left: 25px;
 }
 
 .accordion-toggle {
   position: absolute;
   top: 0;
-  right: 0;
-  color: #7a8b6d;
+  left: 0;
+  color: #5b6d4d;
   font-size: 14px;
   user-select: none;
   cursor: pointer;
