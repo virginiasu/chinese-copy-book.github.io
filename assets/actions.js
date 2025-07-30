@@ -55,7 +55,7 @@ function pickAll() {
 function addToPrint(character) {
   var printArea = $("#characters");
   var printRow = $("<div></div>").addClass("row");
-  printRow.append(`<div class="divider">divider</div>`);
+  printRow.append(`<div class="divider noPrint">divider</div>`);
   for (var i = 0; i < 9; i++) {
     printRow.append(
       `<span class="char lead"><span class="letter">${character}</span></span>`
