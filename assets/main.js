@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $.getJSON("data/levels.json", function (data) {
+  (function (data) {
     $.each(data, function (level, levelData) {
       var levelDiv = $("<div></div>").addClass("level");
       levelDiv.html(`
@@ -20,5 +20,5 @@ $(document).ready(function () {
         $("#" + level).append(characterSpan);
       });
     });
-  });
+  })(levelsData);
 });

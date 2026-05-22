@@ -41,6 +41,43 @@ span.character {
   margin: 3px;
 }
 
+.togo-slider-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-top: 3px;
+}
+
+.togo-end-label {
+  font-size: 11px;
+  color: #3d5f5e;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 140px;
+  height: 6px;
+  border-radius: 3px;
+  background: #3d5f5e;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #3d5f5e;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 0 3px #3d5f5e;
+}
+
 button.pickAll {
   cursor: pointer;
 }

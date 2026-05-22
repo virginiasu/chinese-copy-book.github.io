@@ -53,15 +53,19 @@ function pickAll() {
 }
 
 function addToPrint(character) {
+  const togoVal = parseInt($("#togoRange").val()) || 12;
+  const leadCount = Math.round(togoVal * 0.8);
+  const practiceCount = togoVal - leadCount;
+
   var printArea = $("#characters");
   var printRow = $("<div></div>").addClass("row");
   printRow.append(`<div class="divider">divider</div>`);
-  for (var i = 0; i < 12; i++) {
+  for (var i = 0; i < leadCount; i++) {
     printRow.append(
       `<span class="char lead"><span class="letter">${character}</span></span>`
     );
   }
-  for (var i = 0; i < 3; i++) {
+  for (var i = 0; i < practiceCount; i++) {
     printRow.append(
       `<span class="char practice"><span class="letter">${character}</span></span>`
     );
@@ -74,6 +78,27 @@ function addToPrint(character) {
 function removeRow() {
   $(event.target).parent().remove();
 }
+
+$(document).on("input", "#togoRange", function () {
+  const togoVal = parseInt($(this).val()) || 12;
+  const leadCount = Math.round(togoVal * 0.8);
+  const practiceCount = togoVal - leadCount;
+
+  $("#characters").toggleClass("togo-less", togoVal === 5);
+
+  $("#characters .row").each(function () {
+    const character = $(this).find(".char .letter").first().text();
+    $(this).find(".char").remove();
+    let html = "";
+    for (var i = 0; i < leadCount; i++) {
+      html += `<span class="char lead"><span class="letter">${character}</span></span>`;
+    }
+    for (var i = 0; i < practiceCount; i++) {
+      html += `<span class="char practice"><span class="letter">${character}</span></span>`;
+    }
+    $(this).find(".divider").after(html);
+  });
+});
 
 function AddCustomToPrint() {
   const characters = $("#customTextInput");

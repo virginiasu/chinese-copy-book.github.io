@@ -122,6 +122,11 @@ div.row .char {
   font-family: fangsong;
 }
 
+#characters.togo-less div.row .char {
+  font-size: 42px;
+  padding: 10px;
+}
+
 div.row span.char::before {
   content: "";
   position: absolute;
