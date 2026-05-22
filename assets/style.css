@@ -8,6 +8,7 @@ input[type="checkbox"] {
   -o-appearance: none;
   vertical-align: middle;
 }
+
 input[type="checkbox"]:checked {
   /* use a check icon as background */
   background: url("check.png") no-repeat center center;
@@ -80,4 +81,5 @@ input[type="range"]::-webkit-slider-thumb {
 
 button.pickAll {
   cursor: pointer;
+  margin-left: 10px;
 }
